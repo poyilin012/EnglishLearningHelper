@@ -57,7 +57,7 @@ def choose_level2(event):
                         ),
                         PostbackAction(
                             label='6級',
-                            display_text='5級',
+                            display_text='6級',
                             data='action=難度&item=5'
                         )
                     ]
