@@ -32,7 +32,7 @@ from service_actions.correct_pron import *
 from translator import *
 from txt2videoUrl import *
 
-#  可使用指令:  單字庫、考試、正音、翻譯、我需要幫忙
+#  可使用指令:  單字庫、考試、正音、翻譯、功能介紹
 
 
 # create flask server
@@ -253,13 +253,13 @@ def handle_message(event):
             vocabulary_database(event)
         elif '正音' in msg:
             correct_pron_type(event)
-        elif '我需要幫忙' in msg:
+        elif '功能介紹' in msg:
             message = '功能介紹:\n'
             message += '---翻譯--- \n幫您中翻英、英翻中!\n'
             message += '---考試--- \n指定難度、題數，就可以幫您做高中單字的小測驗，還能複習錯過的單字!\n'
             message += '---正音--- \n查詢高中單字的正確發音，也可以幫您的發音打分數!\n'
             message += '---單字庫--- \n看看高中單字都有些甚麼，還能看看之前測驗錯了哪些字!\n'
-            message += '\n官網請見: https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+            #message += '\n官網請見: https://www.youtube.com/watch?v=dQw4w9WgXcQ'
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text = message))
 
 ### 正音 ###
