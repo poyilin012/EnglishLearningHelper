@@ -7,7 +7,7 @@ def translate_type(event):
     message = TemplateSendMessage(
         alt_text='Buttons template',
         template=ButtonsTemplate(
-            title='請問需要如何查詢呢?',
+            title='請問需要如何翻譯呢?',
             text='請在下方點選您需要的服務項目',
             actions=[
                 PostbackAction(
